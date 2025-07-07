@@ -41,6 +41,7 @@ func TestCafeWhenOk(t *testing.T) {
 	}
 	for _, v := range requests {
 		response := httptest.NewRecorder()
+        
 		req := httptest.NewRequest("GET", v, nil)
 
 		handler.ServeHTTP(response, req)
