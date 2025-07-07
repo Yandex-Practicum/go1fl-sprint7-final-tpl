@@ -9,6 +9,13 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+/**
+* TestCafeNegative tests various negative scenarios for the cafe handler.
+* It checks that the handler returns the correct status code and error message
+* for invalid requests, including unknown city and incorrect count parameters.
+*
+* @param t The testing.T object for test assertions and logging.
+*/
 func TestCafeNegative(t *testing.T) {
 	handler := http.HandlerFunc(mainHandle)
 
