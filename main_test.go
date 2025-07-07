@@ -31,6 +31,13 @@ func TestCafeNegative(t *testing.T) {
 	}
 }
 
+/**
+* TestCafeWhenOk tests the cafe handler with valid requests.
+* It checks that the handler returns HTTP status OK (200) for various valid requests,
+* including requests with count parameter, city parameter, and search parameter.
+*
+* @param t *testing.T - testing object for assertions and logging
+*/
 func TestCafeWhenOk(t *testing.T) {
 	handler := http.HandlerFunc(mainHandle)
 
@@ -49,6 +56,12 @@ func TestCafeWhenOk(t *testing.T) {
 	}
 }
 
+/**
+* TestCafeCount tests the cafe count functionality of the mainHandle handler.
+* It sends various count values and verifies the number of cafes returned matches expectations.
+*
+* @param t *testing.T The testing object provided by the testing package
+*/
 func TestCafeCount(t *testing.T) {
     handler := http.HandlerFunc(mainHandle)
 
