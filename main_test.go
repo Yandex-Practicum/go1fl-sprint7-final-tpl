@@ -105,6 +105,19 @@ func TestCafeCount(t *testing.T) {
     }
 }
 
+/**
+* TestCafeSearch tests the cafe search functionality.
+* 
+* It sends multiple test requests with different search terms and verifies:
+* - The response status code is OK (200)
+* - The number of returned cafes matches expected count for each search term
+* - Each returned cafe name contains the search term (case-insensitive)
+* 
+* Test cases include:
+* - Search for "фасоль" (expected 0 results)
+* - Search for "кофе" (expected 2 results)
+* - Search for "вилка" (expected 1 result)
+*/
 func TestCafeSearch(t *testing.T) {
     handler := http.HandlerFunc(mainHandle)
 
