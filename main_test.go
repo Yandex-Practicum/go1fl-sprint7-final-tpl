@@ -33,7 +33,6 @@ func TestCafeNegative(t *testing.T) {
 
 func TestCafeWhenOk(t *testing.T) {
 	handler := http.HandlerFunc(mainHandle)
-
 	requests := []string{
 		"/cafe?count=2&city=moscow",
 		"/cafe?city=tula",
